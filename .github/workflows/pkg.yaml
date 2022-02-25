@@ -11,6 +11,6 @@ jobs:
       - uses: actions/setup-node@v2
       - run: yarn cache clean
       - run: yarn install --network-concurrency 1
-      - run: yarn publish --access=public
+      - run: yarn publish --access=public --non-interactive
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
